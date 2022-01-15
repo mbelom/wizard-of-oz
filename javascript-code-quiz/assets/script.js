@@ -230,11 +230,11 @@ function storeHighScores(event) {
     return;
   }
 
-  startDiv.style.display = "none";
+  //startDiv.style.display = "none";
   timer.style.display = "none";
   timesUp.style.display = "none";
-  summary.style.display = "none";
-  highScoreSection.style.display = "block";
+  //summary.style.display = "none";
+  //highScoreSection.style.display = "block";
 
   // store scores into local storage
   var savedHighScores = localStorage.getItem("high scores");
@@ -265,12 +265,12 @@ function storeHighScores(event) {
 // function to show high scores
 var i = 0;
 function showHighScores() {
-  startDiv.style.display = "none";
+  //startDiv.style.display = "none";
   timer.style.display = "none";
   questionDiv.style.display = "none";
   timesUp.style.display = "none";
   summary.style.display = "none";
-  highScoreSection.style.display = "block";
+  //highScoreSection.style.display = "block";
 
   var savedHighScores = localStorage.getItem("high scores");
 
@@ -282,7 +282,7 @@ function showHighScores() {
 
   var storedHighScores = JSON.parse(savedHighScores);
 
-  for (; i < storedHighScores.length; i++) {
+  for (i=0; i < storedHighScores.length; i++) {
     var eachNewHighScore = document.createElement("p");
     eachNewHighScore.innerHTML =
       storedHighScores[i].initials + ": " + storedHighScores[i].score;
@@ -310,7 +310,7 @@ viewHighScore.addEventListener("click", function (event) {
 
 goBackBtn.addEventListener("click", function () {
   startDiv.style.display = "block";
-  highScoreSection.style.display = "none";
+  //highScoreSection.style.display = "none";
 });
 
 clearHighScoreBtn.addEventListener("click", function () {
